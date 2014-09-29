@@ -16,8 +16,10 @@
       $item = $db->select($query);
     }
 ?>
-
-    <h1><legend>Items In the System</legend></h1>
+    
+      <legend>Items In the System</legend>
+     <a class="btn btn-primary" href="addItem.php">Add A New Item</a>
+     <br>
     <table summary="Orders"class="table table-striped">
       <thead>
         <th>Item ID</th>
