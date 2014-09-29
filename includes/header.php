@@ -66,6 +66,15 @@
 </header>
 <div class="container">
   <div class="row">
+    <div class="col-sm-12">
+      <?php if(isset($_GET['msg'])): ?>
+        <div class="alert alert-success"><?php echo htmlentities($_GET['msg']); ?></div>
+      <?php endif; ?>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
     <div class="col-md-2" id="leftCol">
         <div class="well">
             <ul role="complimentary" class="nav nav-stacked" id="sidebar">
