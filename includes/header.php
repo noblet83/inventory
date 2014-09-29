@@ -1,3 +1,8 @@
+
+<?php include 'config/config.php' ?>
+<?php include 'libraries/Database.php' ?>
+<?php include 'helpers/format_helper.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,6 +16,7 @@
     <![endif]-->
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/stickyfooter.css">
+    <script type="text/javascript" src="js/ckeditor/ckeditor.js"></script>
   </head>
 <body>
 <header class="navbar navbar-default navbar-static-top" role="banner">
@@ -27,21 +33,22 @@
         </div>
         <nav class="collapse navbar-collapse pull-right" role="navigation">
             <ul class="nav navbar-nav">
-                <li> <a href="#" class="">Orders</a> 
+                <li> <a href="orders.php" class="">Orders</a> 
                 </li>
-                <li> <a href="#" class="">Inventory</a>
+                <li> <a href="inventory.php" class="">Inventory</a>
                 </li>
-                <li> <a href="#" class="">Transactions</a>
+                <li> <a href="transactions.php" class="">Transactions</a>
                 </li>
-                <li> <a href="#" class="">Items</a>
+                <li> <a href="items.php" class="">Items</a>
                 </li>
-                <li> <a href="#" class="">Users</a> 
+                <li> <a href="users.php" class="">Users</a> 
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Modify Order Details</a></li>
                     <li><a href="#">Modify Inventory Details</a></li>
+                    <li><a href="#">Modify Transactions Details</a></li>
                     <li><a href="#">Modify Item Details</a></li>
                     <li><a href="#">Modify User Details</a></li>
                   </ul>
@@ -57,3 +64,18 @@
         </nav>
     </div>
 </header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2" id="leftCol">
+        <div class="well">
+            <ul role="complimentary" class="nav nav-stacked" id="sidebar">
+                <li><a href="#sec2" class="">Enter New Order</a>
+                </li>
+                <li><a href="#sec4" class="">Enter Item Into Inventory</a>
+                </li>
+                <li><a href="#sec3" class="">Deploy Item</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  <div class="col-md-10">

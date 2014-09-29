@@ -17,7 +17,7 @@
     }
 ?>
 
-    <h1><legend>Current Inventory</legend></h1>
+    <h1><legend>Items In the System</legend></h1>
     <table summary="Orders"class="table table-striped">
       <thead>
         <th>Item ID</th>
@@ -34,9 +34,9 @@
           <td><?php echo $row['item_name'] ; ?></td>    
           <td><?php echo $row['item_desc'] ; ?></td>  
           <td><?php echo $row['barcode'] ; ?></td>      
-          <td><?php echo $row['serial'] ; ?></td>     
+          <td><?php echo $row['serial'] ; ?></td>   
           <td><button type="button" class="btn btn-sm btn-default">Modify</button></td>
-          <td><button type="button" class="btn btn-sm btn-danger">Delete</button></td>
+          <td><button type="button" class="btn btn-sm  btn-danger">Delete</button></td>  
         </tr>
        
   <?php endwhile; ?>
