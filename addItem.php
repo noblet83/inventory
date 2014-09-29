@@ -18,7 +18,7 @@
 		} else{
 			$query = "Insert INTO item 
 						(item_name, item_desc, barcode, serial)
-						VALUES('$item_name', '$item_desc', $barcode, '$serial')";
+						VALUES('$item_name', '$item_desc', '$barcode', '$serial')";
 			$insert_row = $db->insert($query);
 		}
 	}
@@ -38,9 +38,9 @@
   <div class="form-group">
     <label for="editor1">Item Description</label>
     <textarea name="item_desc" id="editor1" class="form-control" rows="5" cols="40"></textarea>
-      <!--<script>
+      <script>
         CKEDITOR.replace('editor1');
-      </script>-->
+      </script>
 
     
   </div>
