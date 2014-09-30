@@ -42,7 +42,7 @@ class Database{
 
 		//Validate Insert
 		if($insert_row){
-			header("Location: ../views/index.php?msg=".urlencode("Record Added"));
+			header("Location: ../main/index.php?msg=".urlencode("Record Added"));
 			exit();
 		} else{
 			die('Error: ('. $this->link->errno . ') ' . $this->link->error);
@@ -57,7 +57,7 @@ class Database{
 
 		//Validate Insert
 		if($update_row){
-			header("Location:  ../views/index.php?msg=".urlencode('Record Updated'));
+			header("Location:  ../main/index.php?msg=".urlencode('Record Updated'));
 			exit();
 		} else{
 			die('Error: ( ' . $this->link->errno . ')'. $this->link->error);
@@ -72,7 +72,7 @@ class Database{
 
 		//Validate Insert
 		if($delete_row){
-			header("Location:  ../views/index.php?msg=".urlencode('Record Deleted'));
+			header("Location:  ../main/index.php?msg=".urlencode('Record Deleted'));
 			exit();
 		} else{
 			die('Error: (. ' . $this->link->errorno.')'. $this->link->error);
@@ -89,7 +89,7 @@ class Database{
 
 		//Validate Insert
 		if($insert_row){
-			header("Location: ../views/items.php?msg=".urlencode("Item Added"));
+			header("Location: ../main/items.php?msg=".urlencode("Item Added"));
 			exit();
 		} else{
 			die('Error: ('. $this->link->errno . ') ' . $this->link->error);
@@ -105,7 +105,7 @@ class Database{
 
 		//Validate Insert
 		if($update_row){
-			header("Location:  ../views/items.php?msg=".urlencode('Item Updated'));
+			header("Location:  ../main/items.php?msg=".urlencode('Item Updated'));
 			exit();
 		} else{
 			die('Error: ( ' . $this->link->errno . ')'. $this->link->error);
@@ -120,7 +120,7 @@ class Database{
 
 		//Validate Insert
 		if($delete_row){
-			header("Location:  ../views/items.php?msg=".urlencode('Item Deleted'));
+			header("Location:  ../main/items.php?msg=".urlencode('Item Deleted'));
 			exit();
 		} else{
 			die('Error: (. ' . $this->link->errorno.')'. $this->link->error);
@@ -137,7 +137,7 @@ class Database{
 
 		//Validate Insert
 		if($insert_row){
-			header("Location: ../views/inventory.php?msg=".urlencode("Inventory Added"));
+			header("Location: ../main/inventory.php?msg=".urlencode("Inventory Added"));
 			exit();
 		} else{
 			die('Error: ('. $this->link->errno . ') ' . $this->link->error);
@@ -153,7 +153,7 @@ class Database{
 
 		//Validate Insert
 		if($update_row){
-			header("Location:  ../views/inventory.php?msg=".urlencode('Inventory Updated'));
+			header("Location:  ../main/inventory.php?msg=".urlencode('Inventory Updated'));
 			exit();
 		} else{
 			die('Error: ( ' . $this->link->errno . ')'. $this->link->error);
@@ -168,7 +168,7 @@ class Database{
 
 		//Validate Insert
 		if($delete_row){
-			header("Location:  ../views/inventory.php?msg=".urlencode('Inventory Deleted'));
+			header("Location:  ../main/inventory.php?msg=".urlencode('Inventory Deleted'));
 			exit();
 		} else{
 			die('Error: (. ' . $this->link->errorno.')'. $this->link->error);
@@ -185,7 +185,7 @@ class Database{
 
 		//Validate Insert
 		if($insert_row){
-			header("Location: ../views/orders.php?msg=".urlencode("Order Added"));
+			header("Location: ../main/orders.php?msg=".urlencode("Order Added"));
 			exit();
 		} else{
 			die('Error: ('. $this->link->errno . ') ' . $this->link->error);
@@ -201,7 +201,7 @@ class Database{
 
 		//Validate Insert
 		if($update_row){
-			header("Location:  ../views/orders.php?msg=".urlencode('Order Updated'));
+			header("Location:  ../main/orders.php?msg=".urlencode('Order Updated'));
 			exit();
 		} else{
 			die('Error: ( ' . $this->link->errno . ')'. $this->link->error);
@@ -216,7 +216,7 @@ class Database{
 
 		//Validate Insert
 		if($delete_row){
-			header("Location:  ../views/orders.php?msg=".urlencode('Order Deleted'));
+			header("Location:  ../main/orders.php?msg=".urlencode('Order Deleted'));
 			exit();
 		} else{
 			die('Error: (. ' . $this->link->errorno.')'. $this->link->error);
@@ -234,7 +234,7 @@ class Database{
 
 		//Validate Insert
 		if($insert_row){
-			header("Location: ../views/transactions.php?msg=".urlencode("Transaction Added"));
+			header("Location: ../main/transactions.php?msg=".urlencode("Transaction Added"));
 			exit();
 		} else{
 			die('Error: ('. $this->link->errno . ') ' . $this->link->error);
@@ -250,7 +250,7 @@ class Database{
 
 		//Validate Insert
 		if($update_row){
-			header("Location:  ../views/transactions.php?msg=".urlencode('Transaction Updated'));
+			header("Location:  ../main/transactions.php?msg=".urlencode('Transaction Updated'));
 			exit();
 		} else{
 			die('Error: ( ' . $this->link->errno . ')'. $this->link->error);
@@ -265,7 +265,7 @@ class Database{
 
 		//Validate Insert
 		if($delete_row){
-			header("Location:  ../views/transactions.php?msg=".urlencode('Transaction Deleted'));
+			header("Location:  ../main/transactions.php?msg=".urlencode('Transaction Deleted'));
 			exit();
 		} else{
 			die('Error: (. ' . $this->link->errorno.')'. $this->link->error);
@@ -282,7 +282,7 @@ class Database{
 
 		//Validate Insert
 		if($insert_row){
-			header("Location: ../views/users.php?msg=".urlencode("User Added"));
+			header("Location: ../main/users.php?msg=".urlencode("User Added"));
 			exit();
 		} else{
 			die('Error: ('. $this->link->errno . ') ' . $this->link->error);
@@ -298,7 +298,7 @@ class Database{
 
 		//Validate Insert
 		if($update_row){
-			header("Location:  ../views/users.php?msg=".urlencode('User Updated'));
+			header("Location:  ../main/users.php?msg=".urlencode('User Updated'));
 			exit();
 		} else{
 			die('Error: ( ' . $this->link->errno . ')'. $this->link->error);
@@ -313,7 +313,7 @@ class Database{
 
 		//Validate Insert
 		if($delete_row){
-			header("Location:  ../views/users.php?msg=".urlencode('User Deleted'));
+			header("Location:  ../main/users.php?msg=".urlencode('User Deleted'));
 			exit();
 		} else{
 			die('Error: (. ' . $this->link->errorno.')'. $this->link->error);

@@ -33,15 +33,15 @@
         </div>
         <nav class="collapse navbar-collapse pull-right" role="navigation">
             <ul class="nav navbar-nav">
-                <li> <a href="../views/orders.php" class="">Orders</a> 
+                <li> <a href="../main/orders.php" class="">Orders</a> 
                 </li>
-                <li> <a href="../views/inventory.php" class="">Inventory</a>
+                <li> <a href="../main/inventory.php" class="">Inventory</a>
                 </li>
-                <li> <a href="../views/transactions.php" class="">Transactions</a>
+                <li> <a href="../main/transactions.php" class="">Transactions</a>
                 </li>
-                <li> <a href="../views/items.php" class="">Items</a>
+                <li> <a href="../main/items.php" class="">Items</a>
                 </li>
-                <li> <a href="../views/users.php" class="">Users</a> 
+                <li> <a href="../main/users.php" class="">Users</a> 
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <span class="caret"></span></a>
