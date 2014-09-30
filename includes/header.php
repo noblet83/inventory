@@ -1,7 +1,7 @@
 
-<?php include 'config/config.php' ?>
-<?php include 'libraries/Database.php' ?>
-<?php include 'helpers/format_helper.php' ?>
+<?php include '../config/config.php' ?>
+<?php include '../libraries/Database.php' ?>
+<?php include '../helpers/format_helper.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,13 +10,13 @@
     <meta charset="utf-8">
     <title>Inventory Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/stickyfooter.css">
-    <script type="text/javascript" src="js/ckeditor/ckeditor.js"></script>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/stickyfooter.css">
+    <script type="text/javascript" src="../js/ckeditor/ckeditor.js"></script>
   </head>
 <body>
 <header class="navbar navbar-default navbar-static-top" role="banner">
@@ -33,15 +33,15 @@
         </div>
         <nav class="collapse navbar-collapse pull-right" role="navigation">
             <ul class="nav navbar-nav">
-                <li> <a href="orders.php" class="">Orders</a> 
+                <li> <a href="../views/orders.php" class="">Orders</a> 
                 </li>
-                <li> <a href="inventory.php" class="">Inventory</a>
+                <li> <a href="../views/inventory.php" class="">Inventory</a>
                 </li>
-                <li> <a href="transactions.php" class="">Transactions</a>
+                <li> <a href="../views/transactions.php" class="">Transactions</a>
                 </li>
-                <li> <a href="items.php" class="">Items</a>
+                <li> <a href="../views/items.php" class="">Items</a>
                 </li>
-                <li> <a href="users.php" class="">Users</a> 
+                <li> <a href="../views/users.php" class="">Users</a> 
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <span class="caret"></span></a>

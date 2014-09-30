@@ -1,4 +1,4 @@
-<?php include 'includes/header.php' ?>
+<?php include '../includes/header.php' ?>
 <?php
    //Create DB Object
   $db = new Database();
@@ -22,23 +22,26 @@
   //Run Query
   $orders = $db->select($query);
 
-  $query = "SELECT item.item_id, item.item_name, orders.item_id FROM item INNER JOIN orders ON item.item_id=orders.item_id";
+  $query = "SELECT inventory.item_id, inventory.item_name, orders.item_id FROM inventory INNER JOIN orders ON inventory.item_id=orders.item_id";
   /*$query = "SELECT item.*, orders.item_id from item INNER JOIN orders on item.item_id = orders.item_id";*/
-  $item = $db->select($query);
+  $inventory = $db->select($query);
 
 ?>
 
 		<h1><legend>Recent Orders</legend></h1>
-		<table summary="Orders"class="table table-striped">
-  		<thead>
-  			<th>Order ID</th>
-  			<th>Order Title</th>
-  			<th>Status</th>
-  			<th>Quantity</th>
-  			<th>Item Name</th>
-  			<th>Order Date</th>
-  			<th>Notes</th>
-  		</thead>
+    <button type="submit" onclick="window.location.href='../action/addOrder.php'" class="btn btn-primary">
+    <span class="glyphicon glyphicon-plus"></span>  Add A New Order
+    </button>
+  		<table summary="Orders"class="table table-striped">
+    		<thead>
+    			<th>Order ID</th>
+    			<th>Order Title</th>
+    			<th>Status</th>
+    			<th>Quantity</th>
+    			<th>Item Name</th>
+    			<th>Order Date</th>
+    			<th>Notes</th>
+    		</thead>
 
 	<?php if($orders) : ?>
 	  <?php while($row = $orders->fetch_assoc()) : ?>
@@ -61,4 +64,4 @@
 	  <p>There are no orders yet</p>
 	<?php endif; ?>
 
-<?php include 'includes/footer.php' ?>
+<?php include '../includes/footer.php' ?>

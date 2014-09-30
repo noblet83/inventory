@@ -1,4 +1,4 @@
-<?php include 'includes/header.php' ?>
+<?php include '../includes/header.php' ?>
 <?php
    //Create DB Object
   $db = new Database();
@@ -19,7 +19,10 @@
 
 
 		<h1><legend>Recent Transactions</legend></h1>
-		<table summary="Orders"class="table table-striped">
+      <button type="submit" onclick="window.location.href='../action/addTransaction.php'" class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span>  Add A New Transaction
+      </button>
+		<table summary="transactions"class="table table-striped">
   		<thead>
   			<th>Trans ID</th>
   			<th>Status</th>
@@ -49,4 +52,4 @@
 	  <p>There are no transactions yet</p>
 	<?php endif; ?>
 
-<?php include 'includes/footer.php' ?>
+<?php include '../includes/footer.php' ?>

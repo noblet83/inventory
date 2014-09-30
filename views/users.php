@@ -1,4 +1,4 @@
-<?php include 'includes/header.php' ?>
+<?php include '../includes/header.php' ?>
 <?php
    //Create DB Object
   $db = new Database();
@@ -18,7 +18,10 @@
 ?>
 
     <h1><legend>Users In the System</legend></h1>
-    <table summary="Orders"class="table table-striped">
+      <button type="submit" onclick="window.location.href='../action/addItem.php'" class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span>  Add A New User
+      </button>
+    <table summary="users"class="table table-striped">
       <thead>
         <th>Name</th>
         <th>SID</th>
@@ -40,4 +43,4 @@
     <p>There are no users yet</p>
   <?php endif; ?>
 
-<?php include 'includes/footer.php' ?>
+<?php include '../includes/footer.php' ?>
