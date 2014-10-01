@@ -10,7 +10,7 @@
       $posts = $db->select($query);
     } else{
         //Create Query
-      $query = "SELECT * FROM inventory WHERE instock > 1
+      $query = "SELECT * FROM inventory WHERE instock >= 1
                 ORDER by item_id DESC";
       //Run Query
       $inventory = $db->select($query);
