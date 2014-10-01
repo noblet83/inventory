@@ -10,7 +10,7 @@
       $posts = $db->select($query);
     } else{
         //Create Query
-      $query = "SELECT * FROM inventory WHERE instock = 1
+      $query = "SELECT * FROM inventory WHERE instock > 1
                 ORDER by item_id DESC";
       //Run Query
       $inventory = $db->select($query);
@@ -39,7 +39,7 @@
 	  			<td><?php echo $row['item_desc'] ; ?></td>  
 	  			<td><?php echo $row['barcode'] ; ?></td>  		
 	  			<td><?php echo $row['serial'] ; ?></td>
-          <td>Need to add this counting</td>
+          <td><?php echo $row['instock'] ; ?></td>
 	  			<td><button type="button" class="btn btn-sm  btn-default">Modify</button></td>
           		<td><button type="button" class="btn btn-sm btn-danger">Delete</button></td>	
 	  		</tr>

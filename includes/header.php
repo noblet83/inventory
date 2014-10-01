@@ -28,7 +28,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
 
-            </button> <a href="index.php" class="navbar-brand">Inventory System</a>
+            <!-- Need to fix this with document root -->
+            </button> <a href="/inventory/main/index.php" class="navbar-brand">Inventory System</a>
 
         </div>
         <nav class="collapse navbar-collapse pull-right" role="navigation">
@@ -67,22 +68,24 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+      <h1 aria-live="assertive" class="text-center">
       <?php if(isset($_GET['msg'])): ?>
         <div class="alert alert-success"><?php echo htmlentities($_GET['msg']); ?></div>
       <?php endif; ?>
+      <//h1>
     </div>
   </div>
 </div>
 <div class="container">
   <div class="row">
     <div class="col-md-2" id="leftCol">
-        <div class="well">
-            <ul role="complimentary" class="nav nav-stacked" id="sidebar">
-                <li><a href="#sec2" class="">Enter New Order</a>
+        <div class="">
+            <ul role="complimentary" class="nav nav-pills nav-stacked" id="sidebar">
+                <li><a href="/inventory/action/addOrder.php" class="">Enter New Order</a>
                 </li>
-                <li><a href="#sec4" class="">Enter Item Into Inventory</a>
+                <li><a href="/inventory/action/addInventory.php" class="">Enter Item Into Inventory</a>
                 </li>
-                <li><a href="#sec3" class="">Deploy Item</a>
+                <li><a href="/inventory/action/addTransaction.php" class="">Deploy Item</a>
                 </li>
             </ul>
         </div>

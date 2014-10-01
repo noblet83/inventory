@@ -18,7 +18,7 @@
 ?>
 
     <h1><legend>Users In the System</legend></h1>
-      <button type="submit" onclick="window.location.href='../action/addItem.php'" class="btn btn-primary">
+      <button type="submit" onclick="window.location.href='../action/addUser.php'" class="btn btn-primary">
         <span class="glyphicon glyphicon-plus"></span>  Add A New User
       </button>
     <table summary="users"class="table table-striped">
