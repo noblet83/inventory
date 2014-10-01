@@ -17,6 +17,7 @@
     }
 ?>
 
+
 		<h1><legend>Current Inventory</legend></h1>
       <button type="submit" onclick="window.location.href='../action/addInventory.php'" class="btn btn-primary">
         <span class="glyphicon glyphicon-plus"></span>  Add New Inventory
@@ -40,8 +41,8 @@
 	  			<td><?php echo $row['barcode'] ; ?></td>  		
 	  			<td><?php echo $row['serial'] ; ?></td>
           <td><?php echo $row['instock'] ; ?></td>
-	  			<td><button type="button" class="btn btn-sm  btn-default">Modify</button></td>
-          		<td><button type="button" class="btn btn-sm btn-danger">Delete</button></td>	
+	  			<td><a href="../action/editInventory.php?item_id=<?php echo urlencode($row['item_id']); ?>" class="btn btn-sm  btn-default">Modify Item <?php echo $row['item_id'] ; ?></a></td>
+          		<td><a href="../action/editInventory.php?item_id=<?php echo urlencode($row['item_id']); ?>" class="btn btn-sm  btn-danger">Delete Item <?php echo $row['item_id'] ; ?></a></td></td>	
 	  		</tr>
        
 	<?php endwhile; ?>
