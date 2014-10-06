@@ -41,8 +41,8 @@
 	  			<td><?php echo $row['barcode'] ; ?></td>  		
 	  			<td><?php echo $row['serial'] ; ?></td>
           <td><?php echo $row['instock'] ; ?></td>
-	  			<td><a href="../action/editInventory.php?item_id=<?php echo urlencode($row['item_id']); ?>" class="btn btn-sm  btn-default">Modify Item <?php echo $row['item_id'] ; ?></a></td>
-          		<td><a href="../action/editInventory.php?item_id=<?php echo urlencode($row['item_id']); ?>" class="btn btn-sm  btn-danger">Delete Item <?php echo $row['item_id'] ; ?></a></td></td>	
+	  			<td><button onclick="window.location.href='../action/editInventory.php?item_id=<?php echo urlencode($row['item_id']); ?>'" class="btn btn-sm  btn-danger">Modify Item <?php echo $row['item_id'] ; ?></button></td>
+         
 	  		</tr>
        
 	<?php endwhile; ?>

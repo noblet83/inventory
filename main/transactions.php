@@ -41,8 +41,7 @@
 	  			<td><?php echo $row['item_id'] ; ?></td>  		
 	  			<td><?php echo $row['user_sid'] ; ?></td>  		
 	  			<td><?php echo formatDate($row['trans_time']) ; ?></td>
-	  			<td><button type="button" class="btn btn-sm btn-default">Modify</button></td>
-          		<td><button type="button" class="btn btn-sm btn-danger">Delete</button></td>
+	  			<td><button type="button" class="btn btn-sm btn-danger">Modify</button></td>
 	  		</tr>
        
 		<?php endwhile; ?>

@@ -32,8 +32,7 @@
         <tr>
           <td><?php echo $row['fname']." ". $row['lname'] ; ?></td>  
           <td><?php echo $row['user_sid']; ?></td>
-          <td><button type="button" class="btn btn-sm btn-default">Modify</button></td>
-          <td><button type="button" class="btn btn-sm  btn-danger">Delete</button></td>
+          <td><button type="button" class="btn btn-sm btn-danger">Modify</button></td>
         </tr>
        
   <?php endwhile; ?>

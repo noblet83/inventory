@@ -22,8 +22,8 @@
   //Run Query
   $orders = $db->select($query);
 
-  $query = "SELECT inventory.item_id, inventory.item_name, orders.item_id FROM inventory INNER JOIN orders ON inventory.item_id=orders.item_id";
-  /*$query = "SELECT item.*, orders.item_id from item INNER JOIN orders on item.item_id = orders.item_id";*/
+  $query = "SELECT inventory.item_name, inventory.item_name, orders.item_name FROM inventory INNER JOIN orders ON inventory.item_name=orders.item_name";
+  /*$query = "SELECT item.*, orders.item_name from item INNER JOIN orders on item.item_name = orders.item_name";*/
   $inventory = $db->select($query);
 
 ?>
@@ -53,8 +53,7 @@
 	  			<td><?php echo $row['item_name'] ; ?></td>  		
 	  			<td><?php echo formatDate($row['order_date']) ; ?></td> 
 	  			<td><?php echo $row['order_note'] ; ?></td>
-	  			<td><button type="button" class="btn btn-sm btn-default">Modify</button></td>
-          		<td><button type="button" class="btn btn-sm btn-danger">Delete</button></td>
+	  			<td><button type="button" class="btn btn-sm btn-danger">Modify</button></td>
 	  		</tr>
        
 	<?php endwhile; ?>

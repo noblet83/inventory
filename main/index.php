@@ -52,8 +52,7 @@
           <td><?php echo $row['item_name'] ; ?></td>      
           <td><?php echo formatDate($row['order_date']) ; ?></td> 
           <td><?php echo $row['order_note'] ; ?></td>
-          <td><button type="button" class="btn btn-sm btn-default">Modify</button></td>
-              <td><button type="button" class="btn btn-sm btn-danger">Delete</button></td>
+          <td><button type="button" class="btn btn-sm btn-danger">Modify</button></td>
         </tr>
        
   <?php endwhile; ?>

@@ -34,8 +34,7 @@
           <td><?php echo $row['item_id'] ; ?></td>
           <td><?php echo $row['item_name'] ; ?></td>    
           <td><?php echo $row['item_desc'] ; ?></td>  
-          <td><button type="button" class="btn btn-sm  btn-default">Modify</button></td>
-              <td><button type="button" class="btn btn-sm btn-danger">Delete</button></td>  
+          <td><button type="button" class="btn btn-sm  btn-danger">Modify</button></td>
         </tr>
        
   <?php endwhile; ?>
