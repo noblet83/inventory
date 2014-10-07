@@ -21,7 +21,7 @@
       <button type="submit" onclick="window.location.href='../action/addItem.php'" class="btn btn-primary">
         <span class="glyphicon glyphicon-plus"></span>  Add A New Item
       </button>
-    <table summary="items"class="table table-striped">
+    <table summary="items" class="table table-striped">
       <thead>
         <th>Item ID</th>
         <th>Item Name</th>
@@ -34,9 +34,8 @@
           <td><?php echo $row['item_id'] ; ?></td>
           <td><?php echo $row['item_name'] ; ?></td>    
           <td><?php echo $row['item_desc'] ; ?></td>  
-          <td><button type="button" class="btn btn-sm  btn-danger">Modify</button></td>
+          <td><button type="button" class="btn btn-sm  btn-danger" onclick="window.location.href='../action/editInventory.php?item_id=<?php echo urlencode($row['item_id']); ?>'" >Modify <?php echo $row['item_id'];?></button></td>
         </tr>
-       
   <?php endwhile; ?>
         </table>  
               

@@ -25,11 +25,31 @@
   //Run Query
   $orders = $db->select($query);
 
-  $query = "SELECT inventory.item_id, inventory.item_name, orders.item_id FROM inventory INNER JOIN orders ON inventory.item_id=orders.item_id ORDER BY order_id DESC limit 5";
-  /*$query = "SELECT item.*, orders.item_id from item INNER JOIN orders on item.item_id = orders.item_id";*/
+  $query = "SELECT inventory.item_name, inventory.item_name, orders.item_name FROM inventory INNER JOIN orders ON inventory.item_name=orders.item_name ORDER BY order_id DESC limit 5";
+  /*$query = "SELECT item.*, orders.item_name from item INNER JOIN orders on item.item_name = orders.item_name";*/
   $inventory = $db->select($query);
 
 ?>
+
+  <!-- Transactions -->
+<?php
+  
+
+  //Check URL for category
+  if(isset($_GET['trans'])){
+      $trans = $_GET['trans'];
+      $query = "SELECT * FROM trans WHERE trans = ".$trans . " ORDER BY id DESC";
+      $trans = $db->select($query);
+    } else{
+        //Create Query
+      $query = "SELECT * FROM transactions
+                ORDER by trans_id DESC";
+      //Run Query
+      $trans = $db->select($query);
+    }
+?>
+
+
     <h1><legend>Recent Orders</legend></h1>
       <table summary="Orders"class="table table-striped">
         <thead>
@@ -76,7 +96,7 @@
     } else{
         //Create Query
       $query = "SELECT * FROM inventory
-                ORDER by item_id DESC limit 20";
+                ORDER by item_name DESC limit 20";
       //Run Query
       $inventory = $db->select($query);
     }
@@ -87,7 +107,6 @@
       
     <table summary="inventory"class="table table-striped">
       <thead>
-        <th>Item ID</th>
         <th>Item Name</th>
         <th>Item Desc</th>
         <th>Barcode</th>
@@ -97,7 +116,6 @@
   <?php if($inventory) : ?>
     <?php while($row = $inventory->fetch_assoc()) : ?>
         <tr>
-          <td><?php echo $row['item_id'] ; ?></td>
           <td><?php echo $row['item_name'] ; ?></td>    
           <td><?php echo $row['item_desc'] ; ?></td>  
           <td><?php echo $row['barcode'] ; ?></td>      
@@ -116,24 +134,7 @@
 
 
 
-  <!-- Transactions -->
-<?php
-   //Create DB Object
-  $db = new Database();
 
-  //Check URL for category
-  if(isset($_GET['trans'])){
-      $trans = $_GET['trans'];
-      $query = "SELECT * FROM trans WHERE trans = ".$trans . " ORDER BY id DESC";
-      $trans = $db->select($query);
-    } else{
-        //Create Query
-      $query = "SELECT * FROM transactions
-                ORDER by trans_id DESC";
-      //Run Query
-      $trans = $db->select($query);
-    }
-?>
 
 
     <h1><legend>Recent Transactions</legend></h1>
@@ -149,12 +150,12 @@
       </thead>
 
   <?php if($trans) : ?>
-      <?php while($row = $trans->fetch_assoc()) : ?>
+      <?php while($row = $trans->fetch_assoc() ) : ?>
         <tr>
           <td><?php echo $row['trans_id'] ; ?></td>
           <td><?php echo $row['trans_status'] ; ?></td>   
           <td><?php echo $row['trans_note'] ; ?></td>     
-          <td><?php echo $row['item_id'] ; ?></td>      
+          <td><?php echo $row['item_name'] ; ?></td>      
           <td><?php echo $row['user_sid'] ; ?></td>     
           <td><?php echo formatDate($row['trans_time']) ; ?></td>
           <td><button type="button" class="btn btn-sm btn-default">Modify</button></td>
